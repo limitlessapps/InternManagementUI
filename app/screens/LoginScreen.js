@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { View,TextInput,Dimensions,TouchableHighlight,ImageBackground} from 'react-native';
 // import {Container} from '../components/Login'
-import {Container, Header, Content, Form, Item, Input,Text,Button, CardItem, Footer}from 'native-base';
+import {Container, Header, Content, Form, Item, Input,Text,Button, CardItem, Footer,Card}from 'native-base';
 
 
 class LoginScreen extends Component{
@@ -20,8 +20,9 @@ class LoginScreen extends Component{
        textAlign: "center"}}>
         Login
         </Text>
+       
           <CardItem style={{
-          padding:20}}>
+          }}>
         <Content>
           <Form style={{
           }}>
@@ -35,14 +36,21 @@ class LoginScreen extends Component{
             alignItems:"center",
             justifyContent:"center",
             textAlign: "center"}} onPress={()=>this.props.navigation.navigate
-         ('Home')}><Text> Success 
+         ('Home')}><Text> Login 
             </Text></Button> 
           </Form>
         </Content> 
-      </CardItem>
+      </CardItem> 
+      
       <Footer> 
-      <Text>Don't have an account yet?</Text>
+      <Text></Text>
+      <TouchableHighlight 
+        onPress={()=>this.props.navigation.navigate
+         ('SignUpScreen')}
+      ><Text>Don't have an account yet? Sign Up</Text>
+      </TouchableHighlight>
       </Footer>
+     
       </ImageBackground>
           )  };
 }

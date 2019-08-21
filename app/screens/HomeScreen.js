@@ -4,7 +4,9 @@ import { View,TextInput,Dimensions,TouchableHighlight,ImageBackground,Text} from
 class HomeScreen extends Component{
     render(){
         return(
-        <Text>Hello</Text>
-         ) }
+        <Container>
+            <Text>hello</Text>
+        </Container>
+         ) } 
 }
 export default HomeScreen;
