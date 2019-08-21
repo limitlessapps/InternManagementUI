@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { View,TextInput,Dimensions,TouchableHighlight,ImageBackground} from 'react-native';
 // import {Container} from '../components/Login'
 import {Container, Header, Content, Form, Item, Input,Text,Button, CardItem, Footer,Card}from 'native-base';
-
+import {DatePickers} from '../components/DatePicker'
 
 class SignUpScreen extends Component{
     render(){
@@ -18,7 +18,7 @@ class SignUpScreen extends Component{
         <Text style={{
        paddingTop:50,
        textAlign: "center"}}>
-        Login
+        Sign Up
         </Text>
        
           <CardItem style={{
@@ -35,6 +35,9 @@ class SignUpScreen extends Component{
             <Item>
               <Input placeholder="Password" />
             </Item>
+            <Item>
+              <DatePickers/>
+            </Item> 
             <Item last>
               <Input placeholder="confirm Password" />
             </Item>
@@ -45,7 +48,7 @@ class SignUpScreen extends Component{
          ('Home')}><Text> Sign Up 
             </Text></Button> 
           </Form>
-        </Content> 
+        </Content>  
       </CardItem> 
       
       <Footer> 
