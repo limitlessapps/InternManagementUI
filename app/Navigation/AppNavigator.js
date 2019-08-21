@@ -1,17 +1,95 @@
-import {createStackNavigator,createAppContainer} from 'react-navigation';
+import React, { Component } from 'react'
+import {createStackNavigator,createBottomTabNavigator,createSwitchNavigator,createAppContainer} from 'react-navigation';
 import LoginScreen from '../screens/LoginScreen';
 import SignUpScreen from '../screens/SignUpScreen';
- 
-const AppNavigator = createStackNavigator({
-    LoginScreen:{
-        screen:LoginScreen,
-         
-    },
+import HomeScreen from '../screens/HomeScreen'
+import Icon from '@expo/vector-icons/Ionicons';
 
-    SignUpScreen:{
-        screen:SignUpScreen,
+class Navigate extends Component{
+    render(){
+
+    return (
+     
+     
+       <AppContainer/>  
+     
+       
+     
+    );
+}
+}
+export default Navigate;
+
+// const AppNavigator = createStackNavigator({
+//     LoginScreen:{
+//         screen:LoginScreen,
+         
+//     },
+
+//     SignUpScreen:{
+//         screen:SignUpScreen,
           
-    },
+//     },
     
-});
-export default createAppContainer(AppNavigator);
+// });
+// const AppTabNavigator = createBottomTabNavigator({
+//     Home:{
+//         screen:HomeScreen,
+//         navigationOptions:{
+//             tabBarLabel:"Home",
+//             tabBarIcon:({tintColor}) => (
+//                 <Icon name="home" size={25} color={tintColor}/>
+//             )
+//         }
+            
+    
+//     },
+//     Home:{
+//         screen:HomeScreen,
+//         navigationOptions:{
+//             tabBarLabel:"Home",
+//             tabBarIcon:({tintColor}) => (
+//                 <Icon name="home" size={25} color={tintColor}/>
+//             )
+//         }
+            
+    
+//     }
+   
+//     },
+//     // {
+//     //     tabBarOptions:{
+//     //         style:{
+//     //             paddingTop:Platform.OS === "android" ? StatusBar.currentHeight : 0
+//     //         }
+//     //     }
+// );
+
+const AppSwitchNavigator = createSwitchNavigator(
+      {
+        LoginScreen:{
+            screen:LoginScreen,
+             
+        },
+    
+        SignUpScreen:{
+            screen:SignUpScreen,
+              
+        },
+        Home:{
+                    screen:HomeScreen,
+                    navigationOptions:{
+                        tabBarLabel:"Home",
+                        tabBarIcon:({tintColor}) => (
+                            <Icon name="home" size={25} color={tintColor}/>
+                        )
+                    }
+                        
+                
+                }
+      },
+      
+    );
+const AppContainer = createAppContainer (AppSwitchNavigator); 
+  
+// export default createAppContainer

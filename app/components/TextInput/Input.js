@@ -2,8 +2,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { View,TextInput,Dimensions,TouchableHighlight,Text,Button } from 'react-native';
 import styles from './styles'
-import EStyleSheet from 'react-native-extended-stylesheet';
-import AppNavigator from '../../Navigation'
 const { width: WIDTH } = Dimensions.get("window");
 const Input = ()=> {
     return (
@@ -23,19 +21,7 @@ const Input = ()=> {
          
         />
 
-       <TouchableHighlight style={{
-              width: WIDTH - 25,
-              height: 45,
-              borderRadius: 45,
-              backgroundColor: "#432000",
-              justifyContent: "center",
-              marginTop: 20}}>
-        <Text style={{
-                color: "#fff",
-                fontSize: 30,
-                textAlign: "center"}}>Login
-        </Text>
-       </TouchableHighlight>
+
       
        
       </View>  
@@ -50,6 +36,5 @@ const Input = ()=> {
     //     button: PropTypes.string,
     // }
     export default Input;
-
 
 
