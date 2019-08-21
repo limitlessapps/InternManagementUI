@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { View,TextInput,Dimensions,TouchableHighlight,ImageBackground} from 'react-native';
-// import {Container} from '../components/Login'
 import {Container, Header, Content, Form, Item, Input,Text,Button, CardItem, Footer,Card,DatePicker}from 'native-base';
 import {DatePickers} from '../components/DatePicker'
 
@@ -9,7 +8,7 @@ class SignUpScreen extends Component{
     render(){
 
       return ( 
-        <ImageBackground source={require('../components/Login/images/wallpaper.png' )}
+        <ImageBackground source={require('../../assets/images/wallpaper.png' )}
             style={{flex: 1,
             width: null,
             height: null,
