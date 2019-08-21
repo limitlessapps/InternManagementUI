@@ -33,6 +33,20 @@ class SignUpScreen extends Component{
               <Input placeholder="Email Address" />
             </Item>
             <Item>
+            <DatePicker
+            locale={"en"}
+            timeZoneOffsetInMinutes={undefined}
+            modalTransparent={false}
+            animationType={"fade"}
+            androidMode={"default"}
+            placeHolderText="Date of Birth"
+            textStyle={{ color: "green" }}
+            placeHolderTextStyle={{ color: "#d2d2d2" }}
+            onDateChange={this.setDate}
+            disabled={false}
+            />
+            </Item>
+            <Item>
               <Input placeholder="Password" />
             </Item>
             <Item>
