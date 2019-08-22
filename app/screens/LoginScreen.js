@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { View,TextInput,Dimensions,TouchableHighlight,ImageBackground} from 'react-native';
-import {Container, Header, Content, Form, Item, Input,Text,Button, CardItem, Footer,Card}from 'native-base';
+import { View,TextInput,Dimensions,TouchableHighlight,ImageBackground,Text} from 'react-native';
+import {Container, Header, Content, Form, Item, Input,Button, CardItem, Footer,Card}from 'native-base';
 
 
 class LoginScreen extends Component{

@@ -8,7 +8,7 @@ class SignUpScreen extends Component{
     render(){
 
       return ( 
-        <Container source={require('../../assets/images/wallpaper.png' )}
+        <ImageBackground source={require('../../assets/images/wallpaper.png' )}
             style={{flex: 1,
             width: null,
             height: null,
@@ -75,11 +75,11 @@ class SignUpScreen extends Component{
                 </View>
 
               </Form>
-           </Content>  
+            </Content>  
           </CardItem> 
       
      
-         <TouchableHighlight 
+          <TouchableHighlight 
             onPress={()=>this.props.navigation.navigate
             ('LoginScreen')}>
           
@@ -92,9 +92,9 @@ class SignUpScreen extends Component{
                 Already an Account? Login
             </Text>
           
-         </TouchableHighlight>
+          </TouchableHighlight>
     
-        </Container>
+        </ImageBackground>
           )  };
 }
 export default SignUpScreen;
