@@ -13,6 +13,7 @@ class LoginScreen extends Component{
             width: null,
             height: null,
             justifyContent:'center',
+            fontFamily:''
             }}>
 
           <Text style={{
@@ -30,7 +31,7 @@ class LoginScreen extends Component{
                   <Input placeholder="Username" />
                 </Item>
 
-                <Item last>
+                <Item>
                   <Input placeholder="Password" />
                 </Item>
                 <View style={{padding:50,

@@ -8,7 +8,7 @@ class SignUpScreen extends Component{
     render(){
 
       return ( 
-        <ImageBackground source={require('../../assets/images/wallpaper.png' )}
+        <Container source={require('../../assets/images/wallpaper.png' )}
             style={{flex: 1,
             width: null,
             height: null,
@@ -48,16 +48,15 @@ class SignUpScreen extends Component{
                 disabled={false}
                 />
                 </Item>
-
-                <Item>
-                  <Input placeholder="Password" />
-                </Item>
-
                 <Item>
                   <DatePickers/>
                 </Item> 
 
-                <Item last>
+                <Item>
+                  <Input placeholder="Password" />
+                </Item>
+ 
+                <Item>
                   <Input placeholder="confirm Password" />
                 </Item>
 
@@ -95,7 +94,7 @@ class SignUpScreen extends Component{
           
          </TouchableHighlight>
     
-        </ImageBackground>
+        </Container>
           )  };
 }
 export default SignUpScreen;
