@@ -2,23 +2,16 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { View,TextInput,Dimensions,TouchableHighlight,ImageBackground,Text} from 'react-native';
 import {Container, Header, Content, Form, Item, Input,Button, CardItem, Footer,Card}from 'native-base';
-
+import styles from '../styles'
 
 class LoginScreen extends Component{
     render(){
 
       return ( 
         <ImageBackground source={require('../../assets/images/wallpaper.png' )}
-            style={{flex: 1,
-            width: null,
-            height: null,
-            justifyContent:'center',
-            fontFamily:''
-            }}>
+            style={styles.backgroundImage}>
 
-          <Text style={{
-            paddingTop:50,
-            textAlign: "center"}}>Login
+          <Text style={styles.textLogin}>Login
           </Text>
        
           <CardItem>
@@ -34,14 +27,9 @@ class LoginScreen extends Component{
                 <Item>
                   <Input placeholder="Password" />
                 </Item>
-                <View style={{padding:50,
-                       paddingBottom:0}}>
+                <View style={styles.viewLogin}>
                     <Button success 
-                      style={{
-                      alignItems:"center",
-                      justifyContent:"center",
-                      textAlign: "center",
-                      }} 
+                      style={styles.button} 
                       onPress={()=>this.props.navigation.navigate
                       ('Home')}>
                       <Text> Login </Text>
@@ -60,12 +48,7 @@ class LoginScreen extends Component{
             ('SignUpScreen')}>
 
            
-              <Text style={{backgroundColor:'white',
-                color:'#20b2aa',
-                textAlign:'center',
-                alignItems:"center",
-                justifyContent:"center",
-                padding:16}}>
+              <Text style={styles.textSwitch}>
                 Don't have an account yet? Sign Up
               </Text>  
             

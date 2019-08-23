@@ -1,22 +1,16 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { View,TextInput,Dimensions,TouchableHighlight,ImageBackground} from 'react-native';
-import {Container, Header, Content, Form, Item, Input,Text,Button, CardItem, Footer,Card,DatePicker}from 'native-base';
+import { View,TextInput,Dimensions,TouchableHighlight,ImageBackground,Text} from 'react-native';
+import {Container, Header, Content, Form, Item, Input,Button, CardItem, Footer,Card,DatePicker}from 'native-base';
 import {DatePickers} from '../components/DatePicker'
-
+import styles from '../styles'
 class SignUpScreen extends Component{
     render(){
 
       return ( 
         <ImageBackground source={require('../../assets/images/wallpaper.png' )}
-            style={{flex: 1,
-            width: null,
-            height: null,
-            justifyContent:'center',
-            }}>
-          <Text style={{
-            paddingTop:50,
-            textAlign: "center"}}>
+            style={styles.backgroundImage}>
+          <Text style={styles.textLogin}>
               Sign Up
           </Text>
        
@@ -60,14 +54,9 @@ class SignUpScreen extends Component{
                   <Input placeholder="confirm Password" />
                 </Item>
 
-                <View style={{padding:50,
-                      paddingBottom:0}}>
+                <View style={styles.viewLogin}>
                     <Button success 
-                      style={{
-                      alignItems:"center",
-                      justifyContent:"center",
-                      textAlign: "center",
-                      }} 
+                      style={styles.button} 
                       onPress={()=>this.props.navigation.navigate
                       ('Home')}>
                       <Text> Sign Up </Text>
@@ -83,12 +72,7 @@ class SignUpScreen extends Component{
             onPress={()=>this.props.navigation.navigate
             ('LoginScreen')}>
           
-            <Text style={{backgroundColor:'white',
-                color:'#20b2aa',
-                textAlign:'center',
-                alignItems:"center",
-                justifyContent:"center",
-                padding:16}}>
+            <Text style={styles.textSwitch}>
                 Already an Account? Login
             </Text>
           
