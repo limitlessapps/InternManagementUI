@@ -10,8 +10,12 @@ const styles = EStyleSheet.create({
    textLogin:{
        paddingTop:50,
        textAlign:'center',
+       fontSize:29,
    },
-   viewLogin:{
+   textButton:{
+    color:'$white',
+   },
+   viewButton:{
     padding:50,
     paddingBottom:0,
    },
@@ -21,8 +25,8 @@ const styles = EStyleSheet.create({
     textAlign: "center",   
    },
    textSwitch:{
-    backgroundColor:'#ffff',
-    color:'#20b2aa',
+    backgroundColor:'$white',
+    color:'$lightSeaGreen',
     textAlign:'center',
     alignItems:"center",
     justifyContent:"center",

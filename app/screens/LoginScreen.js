@@ -27,12 +27,12 @@ class LoginScreen extends Component{
                 <Item>
                   <Input placeholder="Password" />
                 </Item>
-                <View style={styles.viewLogin}>
+                <View style={styles.viewButton}>
                     <Button success 
                       style={styles.button} 
                       onPress={()=>this.props.navigation.navigate
                       ('Home')}>
-                      <Text> Login </Text>
+                      <Text style={styles.textButton}> Login </Text>
                     </Button> 
                 </View>
                 

@@ -8,7 +8,7 @@ class SignUpScreen extends Component{
     render(){
 
       return ( 
-        <ImageBackground source={require('../../assets/images/wallpaper.png' )}
+        <Container source={require('../../assets/images/wallpaper.png' )}
             style={styles.backgroundImage}>
           <Text style={styles.textLogin}>
               Sign Up
@@ -54,12 +54,12 @@ class SignUpScreen extends Component{
                   <Input placeholder="confirm Password" />
                 </Item>
 
-                <View style={styles.viewLogin}>
+                <View style={styles.viewButton}>
                     <Button success 
                       style={styles.button} 
                       onPress={()=>this.props.navigation.navigate
                       ('Home')}>
-                      <Text> Sign Up </Text>
+                      <Text style={styles.textButton}> Sign Up </Text>
                     </Button> 
                 </View>
 
@@ -77,8 +77,8 @@ class SignUpScreen extends Component{
             </Text>
           
           </TouchableHighlight>
-    
-        </ImageBackground>
-          )  };
+     
+        </Container>
+  )}; 
 }
 export default SignUpScreen;
