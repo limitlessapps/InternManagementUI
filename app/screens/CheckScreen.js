@@ -7,7 +7,7 @@ class CheckScreen extends Component{
         return(
         <View>
             <Headers text='Check in and Out'/>
-            <Buttons text='Check In'/>
+            <Buttons title='Check In'/>
         </View>
          )} 
 }
