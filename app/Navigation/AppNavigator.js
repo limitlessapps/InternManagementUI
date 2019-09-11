@@ -3,6 +3,9 @@ import {createStackNavigator,createBottomTabNavigator,createSwitchNavigator,crea
 import LoginScreen from '../screens/LoginScreen';
 import SignUpScreen from '../screens/SignUpScreen';
 import HomeScreen from '../screens/HomeScreen'
+import CheckScreen from '../screens/CheckScreen'
+import TaskScreen from '../screens/TaskScreen'
+import MenuScreen from '../screens/MenuScreen'
 import Icon from '@expo/vector-icons/Ionicons';
 
 class Navigate extends Component{
@@ -10,60 +13,71 @@ class Navigate extends Component{
 
     return (
      
-     
        <AppContainer/>  
-     
-       
      
     );
 }
 }
 export default Navigate;
 
-// const AppNavigator = createStackNavigator({
-//     LoginScreen:{
-//         screen:LoginScreen,
+const BottomNavigator = createBottomTabNavigator({
+    Home:{
+      screen:HomeScreen,
+      navigationOptions:{
+        tabBarLabel:'Home',
+        tabBarIcon:({tintColor})=>(
+      <Icon name="md-chatboxes" color={tintColor} size={24}/>
+      )
+      }
+       },
+        Check:{
+          screen:CheckScreen,
+          navigationOptions:{
+            tabBarLabel:'Check',
+            tabBarIcon:({tintColor})=>(
+          <Icon name="md-checkmark-circle-outline" color={tintColor} size={24}/> 
+      
          
-//     },
-
-//     SignUpScreen:{
-//         screen:SignUpScreen,
-          
-//     },
-    
-// });
-// const AppTabNavigator = createBottomTabNavigator({
-//     Home:{
-//         screen:HomeScreen,
-//         navigationOptions:{
-//             tabBarLabel:"Home",
-//             tabBarIcon:({tintColor}) => (
-//                 <Icon name="home" size={25} color={tintColor}/>
-//             )
-//         }
-            
-    
-//     },
-//     Home:{
-//         screen:HomeScreen,
-//         navigationOptions:{
-//             tabBarLabel:"Home",
-//             tabBarIcon:({tintColor}) => (
-//                 <Icon name="home" size={25} color={tintColor}/>
-//             )
-//         }
-            
-    
-//     }
-   
-//     },
-//     // {
-//     //     tabBarOptions:{
-//     //         style:{
-//     //             paddingTop:Platform.OS === "android" ? StatusBar.currentHeight : 0
-//     //         }
-//     //     }
-// );
+            )
+          }
+  
+        },
+        Task:{
+          screen:TaskScreen,
+          navigationOptions:{
+            tabBarLabel:'Task',
+            tabBarIcon:({tintColor})=>(
+          <Icon name="md-list-box" color={tintColor} size={24}/> 
+      
+         
+            )
+          }
+        },
+        Menu:{
+          screen:MenuScreen,
+          navigationOptions:{
+            tabBarLabel:'Menu',
+            tabBarIcon:({tintColor})=>(
+          <Icon name="md-menu" color={tintColor} size={24}/> 
+      
+         
+            )
+          }
+        }
+      },{
+        tabBarOptions:{
+          activeTintColor:'#20b2aa', 
+          inactiveTintColor:'grey',
+          style:{
+            backgroundColor:'white',
+            borderTopWidth:0,
+            shadowOffset:{width:5, height:3},
+            shadowColor:'black',
+            shadowOpacity:0.5, 
+           
+          }
+        }
+      });
 
 const AppSwitchNavigator = createSwitchNavigator(
       {
@@ -77,13 +91,7 @@ const AppSwitchNavigator = createSwitchNavigator(
               
         },
         Home:{
-                    screen:HomeScreen,
-                    navigationOptions:{
-                        tabBarLabel:"Home",
-                        tabBarIcon:({tintColor}) => (
-                            <Icon name="home" size={25} color={tintColor}/>
-                        )
-                    }
+           screen:BottomNavigator,
                         
                 
                 }
@@ -92,4 +100,3 @@ const AppSwitchNavigator = createSwitchNavigator(
     );
 const AppContainer = createAppContainer (AppSwitchNavigator); 
   
-// export default createAppContainer

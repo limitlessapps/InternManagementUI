@@ -1,4 +1,4 @@
-import DatePickers from './DatePickers';
+import Datepicker from './DatePickers';
 import styles from './styles';
 
-export { DatePickers, styles };
+export { Datepicker, styles };

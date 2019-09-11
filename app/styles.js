@@ -32,7 +32,22 @@ const styles = EStyleSheet.create({
     justifyContent:"center",
     padding:16,   
    },
+   addTask:{
+    paddingTop:20,
+    paddingLeft:10,
+    color:'#20b2aa'
+   },
+   image:{
+       borderRadius:50,
+       width:60,
+      height:60,   
+   },
+   homepage:{
+       
+       padding:20,
+   }
 });
+
 export default styles;
 
 
