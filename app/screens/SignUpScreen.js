@@ -1,28 +1,7 @@
 import PropTypes from 'prop-types';
-import React, {
-  Component
-} from 'react';
-import {
-  View,
-  TextInput,
-  Dimensions,
-  TouchableHighlight,
-  ImageBackground,
-  Text
-} from 'react-native';
-import {
-  Container,
-  Header,
-  Content,
-  Form,
-  Item,
-  Input,
-  Button,
-  CardItem,
-  Footer,
-  Card,
-  DatePicker
-} from 'native-base';
+import React, {Component} from 'react';
+import {View,TextInput,Dimensions,TouchableHighlight,ImageBackground, Text} from 'react-native';
+import {Container,Header,Content,Form,Item,Input,Button,CardItem,Footer, Card,DatePicker} from 'native-base';
 import styles from '../styles'
 import Datepicker from '../components/DatePicker/DatePickers';
 class SignUpScreen extends Component {
@@ -41,13 +20,8 @@ class SignUpScreen extends Component {
   render() {
 
     return ( 
-    <Container source = {
-        require('../../assets/images/wallpaper.png')
-      }
-      style = {styles.backgroundImage} >
-      <Text style = {
-        styles.textLogin}>Sign Up 
-        </Text>
+    <Container source = {require('../../assets/images/wallpaper.png') }style = {styles.backgroundImage}>
+      <Text style = {styles.textLogin}>Sign Up </Text>
 
       <CardItem>
 
@@ -81,14 +55,9 @@ class SignUpScreen extends Component {
       <Input placeholder = "confirm Password" />
       </Item>
 
-      <View style = {
-        styles.viewButton}>
-      <Button success style = {
-        styles.button}onPress = {
-        () => this.props.navigation.navigate('Home')
-      }>
-      <Text style = {
-        styles.textButton}> Sign Up </Text> 
+      <View style = {styles.viewButton}>
+      <Button success style = {styles.button}onPress = {() => this.props.navigation.navigate('Home')}>
+      <Text style = {styles.textButton}> Sign Up </Text> 
         </Button>  
         </View>
 
@@ -106,8 +75,8 @@ class SignUpScreen extends Component {
 
       </TouchableHighlight>
 
-      </Container>
-    )
+    </Container>
+  )
   };
 }
 export default SignUpScreen;

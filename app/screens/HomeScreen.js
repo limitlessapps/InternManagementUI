@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image,View,TextInput,Dimensions,TouchableHighlight,ImageBackground,Text,TouchableOpacity} from 'react-native';
+import { Image,View,TextInput,Dimensions,TouchableHighlight,ImageBackground,Text,TouchableOpacity,ScrollView} from 'react-native';
 import {Headers} from '../components/Header';
 import Icon from '@expo/vector-icons/Ionicons';
 import {Search} from '../components/Search';
