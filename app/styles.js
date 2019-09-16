@@ -45,6 +45,19 @@ const styles = EStyleSheet.create({
    homepage:{
        
        padding:20,
+   },
+   checkBackground:{
+       backgroundColor:'$dodgerblue',
+       margin:10,
+       height:60,
+       justifyContent:'center'
+   },
+  
+   checkText:{
+       color:'$white',
+       textAlign:'center',
+       fontSize:16,
+       marginTop:15,
    }
 });
 

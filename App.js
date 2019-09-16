@@ -9,6 +9,7 @@ EStyleSheet.build({
   $hexGray:'#707070',
   $hexLightGray:'#E6E6E6',
   $hexWhite:'#EFEFEF',
+  $dodgerblue:'#1E90FF'
   
 });
 

@@ -8,7 +8,7 @@ const Buttons = (props) => {
   
     return (
         <View style={styles.viewButtons}>
-            <Button style={styles.buttons} onPress={() => this._handlePress()} title={title}>
+            <Button style={styles.buttons} title={title}>
             {title}
             </Button>
         </View>
