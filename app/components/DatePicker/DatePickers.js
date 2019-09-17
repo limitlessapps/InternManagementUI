@@ -3,7 +3,7 @@ import { Container, Header, Content, DatePicker, Text } from "native-base";
 import styles from "./styles";
 import PropTypes from 'prop-types';
 const Datepicker = (props) => {
-  const {placeholder,onDateChange}=props
+  const { placeholder, onDateChange } = props
   return (
 
     <Content>
@@ -17,12 +17,12 @@ const Datepicker = (props) => {
         textStyle={{ color: "green" }}
         placeHolderTextStyle={{ color: "#d2d2d2" }}
         onDateChange={onDateChange}
-        disabled={false}/>
+        disabled={false} />
     </Content>
   );
 };
-Datepicker.propTypes={
-onDateChange: PropTypes.func,
-placeholder:PropTypes.string
+Datepicker.propTypes = {
+  onDateChange: PropTypes.func,
+  placeholder: PropTypes.string
 }
 export default Datepicker;

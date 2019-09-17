@@ -1,17 +1,16 @@
-import React, {Component} from 'react';
-import {Modal, Text, TouchableHighlight, View, Alert} from 'react-native';
+import React, { Component } from 'react';
+import { Modal, Text, TouchableHighlight, View, Alert } from 'react-native';
 import PropTypes from 'prop-types';
 
-const Modals = ({isVisible, onBackdropPress,}) =>
-{
-<Modal isVisible={isVisible}
-onBackdropPress={onBackdropPress}>
+const Modals = ({ isVisible, onBackdropPress, }) => {
+  <Modal isVisible={isVisible}
+    onBackdropPress={onBackdropPress}>
 
-</Modal>
+  </Modal>
 };
 Modals.propTypes = {
-  isVisible:PropTypes.bool,
-  onBackdropPress:PropTypes.func,
+  isVisible: PropTypes.bool,
+  onBackdropPress: PropTypes.func,
 };
-    
+
 export default Modals;
